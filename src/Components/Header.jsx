@@ -16,6 +16,7 @@ const Header = () => {
           aria-label='Dogs - Home'
         >
           <Dogs />
+          <span className={styles.home}>Home</span>
         </Link>
         {data ? (
           <Link className={styles.login} to="/conta">

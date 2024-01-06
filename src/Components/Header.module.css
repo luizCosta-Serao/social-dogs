@@ -19,6 +19,14 @@
   padding: .5rem 0;
 }
 
+.home {
+  font-size: 1rem;
+  padding-left: .4rem;
+  position: relative;
+  bottom: 3px;
+  color: #333;
+}
+
 .login {
   color: #333;
   display: flex;
