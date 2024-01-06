@@ -8,11 +8,12 @@ const Feed = ({ user }) => {
   const [pages, setPages] = React.useState([1])
   const [infinite, setInfinite] = React.useState(true)
 
-
   React.useEffect(() => {
-    setTimeout(() => {
-      setPages([1, 2])
-    }, 1600)
+    if(window.location.pathname === '/') {
+      setTimeout(() => {
+        setPages([1, 2])
+      }, 1600)
+    }
   }, [])
 
   React.useEffect(() => {

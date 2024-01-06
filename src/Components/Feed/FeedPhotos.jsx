@@ -27,6 +27,11 @@ const FeedPhotos = ({ page, user, setModalPhoto, setInfinite }) => {
   if(data)
     return (
       <ul className={`${styles.feed} animeLeft`}>
+        {data.length === 0 ? (
+          <h2 className={styles.noPhoto}>
+            Nenhuma foto publicada.
+          </h2>
+        ): '' }
         {data.map((photo) => (
           <FeedPhotosItem
             key={photo.id}

@@ -6,6 +6,11 @@
   justify-items: center;
 }
 
+.noPhoto {
+  font-size: 1.125rem;
+  color: #333;
+}
+
 @media (max-width: 640px) {
   .feed {
     grid-template-columns: 1fr 1fr;
