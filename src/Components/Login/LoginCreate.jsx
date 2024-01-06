@@ -26,7 +26,7 @@ const LoginCreate = () => {
     const { response } = await request(url, options)
     if(response.ok) userLogin(username.value, password.value)
   }
-  
+   
   return (
     <section className='animeLeft'>
       <Head
@@ -48,7 +48,7 @@ const LoginCreate = () => {
         />
         <Input 
           label='Senha'
-          type='text'
+          type='password'
           name='password'
           {...password}
         />

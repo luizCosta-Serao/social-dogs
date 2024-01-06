@@ -8,6 +8,13 @@ const Feed = ({ user }) => {
   const [pages, setPages] = React.useState([1])
   const [infinite, setInfinite] = React.useState(true)
 
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setPages([1, 2])
+    }, 1600)
+  }, [])
+
   React.useEffect(() => {
     let wait = false
     function infiniteScroll() {
@@ -31,7 +38,7 @@ const Feed = ({ user }) => {
     }
   }, [infinite])
 
-  return (
+  return (    
     <div>
       {modalPhoto && <FeedModal photo={modalPhoto} setModalPhoto={setModalPhoto} />}
       {pages.map((page) => (

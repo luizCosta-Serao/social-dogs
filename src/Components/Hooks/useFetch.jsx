@@ -13,10 +13,10 @@ const useFetch = () => {
       setLoading(true);
       response = await fetch(url, options);
       json = await response.json();
-      if(!response.ok) throw new Error(json.message);
+      if(!response.ok) throw new Error('Email ou Usuário já cadastrado');
     } catch(err) {
       json = null;
-      setError(err.message);
+      setError('Email ou Usuário já cadastrado');
     } finally {
       setData(json);
       setLoading(false);
