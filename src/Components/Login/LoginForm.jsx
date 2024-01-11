@@ -20,7 +20,6 @@ const LoginForm = () => {
     if(username.validate() && password.validate()) {
       userLogin(username.value, password.value)
     }
-
   }
 
   return (
@@ -49,7 +48,7 @@ const LoginForm = () => {
         ) : (
           <Button>Entrar</Button>
         )}
-        <Error  error={error && 'Dados incorretos'}/>
+        <Error error={error && 'Dados incorretos'}/>
       </form>
       <Link className={styles.perdeu} to="/login/perdeu">
         Perdeu a Senha?
